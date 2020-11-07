@@ -1,4 +1,7 @@
 
+import com.sun.codemodel.internal.JPrimitiveType;
+
+import javax.xml.bind.PrintConversionEvent;
 import java.util.Random;
 
 
@@ -46,8 +49,19 @@ public class Simulation {
         System.out.println("\n***\nSimulation of "+ this.numberOfDies+" dice tossed for "+numberOfTosses+" times.\n***\n");
         for (int i = numberOfDies; i <= numberOfDies*6; i++) {
             float percentage = bin.getBin(i)/(float)numberOfTosses;
-            System.out.printf("\n %3d:  %6d:   %.2f" ,i,bin.getBin(i) ,percentage);
+            System.out.printf("\n %3d:  %6d:   %.2f %s ",i,bin.getBin(i) ,percentage, printCountStars(percentage));
         }
+    }
 
+    public String printCountStars(float percentageNo)
+    {
+        StringBuilder str=new StringBuilder();
+
+        int numberOfStars = (int)(percentageNo *100) ;
+        for (int i = 0; i < numberOfStars; i++) {
+
+            str.append("*");
+        }
+        return str.toString();
     }
 }
