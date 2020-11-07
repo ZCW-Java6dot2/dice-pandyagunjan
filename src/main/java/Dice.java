@@ -7,17 +7,18 @@ public class Dice {
         this.diceRolled=diceRolled;
     }
 
-    public Integer tosssAndSum()
+    public Integer tossAndSum()
     {
         Integer sum=0;
         int max=6;
         int min =1;
-     //   Random random=new Random();
-        for(i=0;i<diceRolled;i++)
+        Random random=new Random();
+        for(int i=0;i<diceRolled;i++)
         {
-            sum+=Math.random()*(max-min+1)+min;
+            sum+=random.nextInt(6)+1;
+           //sum+=(Math.random()*(max-min+1)+min);
 
         }
-   return sum;
+        return sum;
     }
 }
