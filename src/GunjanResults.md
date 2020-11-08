@@ -19,4 +19,4 @@ Simulation of 2 dice tossed for 1000000 times.
   10:   82862:   0.08 ******** 
   11:   55650:   0.06 ***** 
   12:   27916:   0.03 ** 
-Process finished with exit code 0
+Process finished with exit code 
