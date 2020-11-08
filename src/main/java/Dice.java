@@ -21,4 +21,9 @@ public class Dice {
         }
         return sum;
     }
+
+    public Integer getDiceRolled()
+    {
+        return this.diceRolled;
+    }
 }
